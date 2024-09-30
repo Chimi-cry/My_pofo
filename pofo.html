@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #f8f9fa;
+            --bg-dark: #343a40;
+            --text-light: #f8f9fa;
+            --text-dark: #343a40;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        .navbar, .footer {
+            background-color: var(--bg-dark);
+        }
+        .navbar a, .footer a {
+            color: var(--text-light);
+        }
+        .progress-bar {
+            background-color: #007bff;
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .btn-dark-mode {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        [data-theme="dark"] {
+            --bg-light: #343a40;
+            --bg-dark: #f8f9fa;
+            --text-light: #343a40;
+            --text-dark: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Dark Mode Toggle Button -->
+<button class="btn-dark-mode" id="theme-toggle">Toggle Dark Mode</button>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Homepage -->
+<section class="container text-center my-5">
+    <h1>CHIMI GYELTSHEN</h1>
+    <p>Educational Background | Brief Bio</p>
+    <img src="/d/WhatsApp Image 2024-09-29 at 11.03.42 PM.jpeg" class="img-fluid rounded-circle" alt="Your Photo" height="10" width="150">
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="container my-5 text-center">
+    <h2>Skills</h2>
+    <div class="progress my-3 bg-danger">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;">Programmer</div>
+    </div>
+    <div class="progress my-3 bg-danger">
+        <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;">Technician</div>
+    </div>
+    <div class="progress my-3 bg-danger">
+        <div class="progress-bar" role="progressbar" style="width: 90%;">Designer</div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="container my-5">
+    <h2>Team Member</h2>
+    <div class="row">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4">
+            <div class="card portfolio-item">
+                <img src="/d/WhatsApp Image 2024-09-24 at 9.05.54 AM.jpeg" class="card-img-top" alt="Project 1">
+                <div class="card-body">
+                    <h5 class="card-title">Programmer</h5>
+                    <p class="card-text">More info</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4">
+            <div class="card portfolio-item">
+                <img src="/d/cc.jpeg" class="card-img-top" alt="Project 2">
+                <div class="card-body">
+                    <h5 class="card-title">Designer</h5>
+                    <p class="card-text">More info </p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4">
+            <div class="card portfolio-item">
+                <img src="/d/dj.jpeg" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">Technician</h5>
+                    <p class="card-text">More info </p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals for Portfolio -->
+<!-- Modal for Project 1 -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project1ModalLabel">Programmer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                I have a solid grasp of multiple programming languages and problem-solving skills. I understand core concepts like algorithms, data structures, and design patterns, and I apply them effectively to build efficient, scalable solutions. I'm also adaptable, learning new technologies quickly and applying them to projects. I write clean, maintainable code, and I always test and optimize for performance. My experience with debugging and optimizing code allows me to tackle complex challenges while ensuring the software meets user needs.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Project 2 -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project2ModalLabel">Designer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                I have a strong understanding of design principles, user experience (UX) best practices, and attention to detail. I can analyze complex ideas and break them down into visually appealing, functional layouts that resonate with users. I also keep up with design trends, continually learn new tools, and apply feedback to improve my work. My ability to combine creativity with a focus on usability ensures that I create designs that are both beautiful and effective..
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Project 3 -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="project3ModalLabel">Technician</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                I have a deep understanding of the technical systems I work with, whether it's hardware, software, or networking. I can diagnose and troubleshoot problems efficiently, thanks to my hands-on experience and analytical skills. I’m also detail-oriented, ensuring that every task is completed accurately and safely. I stay updated on the latest technologies and industry best practices, which helps me maintain and improve system performance. My ability to think critically under pressure allows me to solve issues quickly while minimizing downtime.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2>Contact Me</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center py-3">
+    <a href="https://github.com" class="me-3"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com" class="me-3"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+</footer>
+
+<!-- Bootstrap JS and Font Awesome -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    themeToggleBtn.addEventListener('click', function() {
+        body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+</script>
+</body>
+</html>
